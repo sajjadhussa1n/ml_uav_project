@@ -8,5 +8,10 @@ def load_data(file_loc="ml_uav_project/ml_uav_project/ml_uav_project_dataset.xls
     return df
 
 
+def export_features_statistics(df, file_loc="ml_uav_project/ml_uav_project/features_statistics.xlsx"):
+    new_df = df.describe().transpose()
+    new_df.to_excel(file_loc)
+
+
 pathloss_df = load_data()
-print(pathloss_df.head(5))
+export_features_statistics(pathloss_df)
