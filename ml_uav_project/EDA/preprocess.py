@@ -13,11 +13,19 @@ def export_features_statistics(df, file_loc="ml_uav_project/ml_uav_project/featu
     new_df = df.describe().transpose()
     new_df.to_excel(file_loc)
 
-def plot_feature_kde(df, col="Phi", xlab="Phi"):
-    sns.kdeplot(data=df, x=col, fill=True, palette="crest", alpha=.75, linewidth=0)
-    #ax1.set_xlabel(xlab)
-    #ax1.set_ylabel("Count")
-    plt.savefig("ml_uav_project/ml_uav_project/EDA/"+col+"_kde_plot.eps",dpi=600)
+
+def plot_feature_kde(df, col="Phi"):
+    plt.figure(figsize=(10, 8), layout = 'tight')
+    sns.set_palette('colorblind')
+    sns.kdeplot(data=df, x=col, cut=0, color = 'cadetblue', fill=True, alpha=0.5)
+    plt.xlabel(col, fontsize=22)
+    plt.ylabel("Density", fontsize=22)
+    plt.xticks(fontsize=22)
+    plt.yticks(fontsize=22)
+    plt.savefig("ml_uav_project/ml_uav_project/EDA/"+col+"_kde_plot.png", dpi=600)
+
+
+#def train_test_split_method
     
     
 
