@@ -28,6 +28,6 @@ X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
 ## 1. Linear Regression
-linear_regression(X_train=X_train_scaled, y_train=y_train)
+lr_rmse, lr_r_squared, lr_mape, lr_mae = linear_regression(X_train=X_train_scaled, y_train=y_train, X_test= X_test_scaled, y_test=y_test)
 
 
