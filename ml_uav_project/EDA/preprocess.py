@@ -41,6 +41,7 @@ def plot_model_results(y_test, predicted_test, model_name='Linear Regression', f
     plt.grid()
     short_name = model_name.lower().split()
     plt.savefig("ml_uav_project/Data/"+short_name[0]+"_"+short_name[-1]+"_results."+format, dpi=600)
+    plt.show()
 
 
 def show_model_results(y_test, predicted_test, model_name='Linear Regression'):

@@ -21,7 +21,6 @@ def linear_regression(X_train, y_train, X_test, y_test):
     print("Test MAE error is:", test_MAE)
     results = (test_error, r_squared_error_test, test_MAPE, test_MAE)
     plot_model_results(y_test, predicted_test, "Linear Regression")
-    show_model_results(y_test, predicted_test, "Linear Regression")
     return results
 
 
